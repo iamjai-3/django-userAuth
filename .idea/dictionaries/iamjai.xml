@@ -2,6 +2,7 @@
   <dictionary name="iamjai">
     <words>
       <w>logoutall</w>
+      <w>passwordreset</w>
     </words>
   </dictionary>
 </component>

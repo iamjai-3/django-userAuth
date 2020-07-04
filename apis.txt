@@ -43,4 +43,53 @@
 			
 			Authorization  Token 6de36ed2f99fd4343544c1fcac88eea54eac12e7d4dfa0660bb9b07024cd6658
 			
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   		
+	RESET PASSWORD : PUT
+	
+		- http://localhost:8000/api/change-password/
+		
+			pass login user token to header
+			
+			Headers - 
+			
+			Authorization  Token 6de36ed2f99fd4343544c1fcac88eea54eac12e7d4dfa0660bb9b07024cd6658
+			
+			- old_password :
+			- new_password :
+		
+		
+		Response Output :
+		
+			{
+			    "status": "Success",
+			    "code": 200,
+			    "message": "Password updated Successfully",
+			    "data": []
+			}		
+		
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  
+	
+	RESET PASSWORD [EMAIL] :
+		
+		- http://127.0.0.1:8000/api/password_reset/
+		
+			- Email :
+		
+		Check your mail for Token
+		
+		- http://127.0.0.1:8000/api/password_reset/confirm/
+			
+			- Token :
+			- password :	{change_password}	
+		
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

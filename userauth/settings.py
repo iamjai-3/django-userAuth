@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'knox',
+    'django_rest_passwordreset',
 ]
 
 REST_FRAMEWORK = {
@@ -129,3 +130,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'codetesting1123@gmail.com'
+EMAIL_HOST_PASSWORD = 'jarvis@1123'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'CodingWithMitch Team <noreply@codingwithmitch.com>'
